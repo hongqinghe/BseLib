@@ -12,13 +12,22 @@ ext {
             constraint_layout       : "1.0.2",
             junit                   : "4.12",
             runner                  : "1.0.1",
-            espresso_core           : "3.0.1"
+            espresso_core           : "3.0.1",
+            dagger2SdkVersion       : "2.0",
+            butterknifeSdkVersion   : "8.5.1"
     ]
     dependencies = [
-            "appcompat-v7"     : "com.android.support:appcompat-v7:${version["androidSupportSdkVersion"]}",
-            "constraint-layout": "com.android.support.constraint:constraint-layout:${version["constraint_layout"]}",
-            "junit"            : "junit:junit:${version["junit"]}",
-            "runner"           : "com.android.support.test:runner:${version["runner"]}",
-            "espresso-core"    : "com.android.support.test.espresso:espresso-core:${version["espresso_core"]}"
+            "appcompat-v7"        : "com.android.support:appcompat-v7:${version["androidSupportSdkVersion"]}",
+            "constraint-layout"   : "com.android.support.constraint:constraint-layout:${version["constraint_layout"]}",
+            "junit"               : "junit:junit:${version["junit"]}",
+            "runner"              : "com.android.support.test:runner:${version["runner"]}",
+            "espresso-core"       : "com.android.support.test.espresso:espresso-core:${version["espresso_core"]}",
+            "javax.annotation"    : "javax.annotation:jsr250-api:1.0",
+            "dagger2"             : "com.google.dagger:dagger:${version["dagger2SdkVersion"]}",
+            "dagger2-compiler"    : "com.google.dagger:dagger-compiler:${version["dagger2SdkVersion"]}",
+            "butterknife"         : "com.jakewharton:butterknife:${version["butterknifeSdkVersion"]}",
+            "butterknife-compiler": "com.jakewharton:butterknife-compiler:${version["butterknifeSdkVersion"]}",
+            "recycleView"         : "com.android.support:recyclerview-v7:${version ["androidSupportSdkVersion"]}"
+
     ]
 }
