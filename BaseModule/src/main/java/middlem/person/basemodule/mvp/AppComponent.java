@@ -12,6 +12,7 @@ import dagger.Component;
  * <P> Date: 2017/11/6 09:08
  ***********************************************/
 public interface AppComponent {
+
     Application application();
 
     void  inject(AppDelegate delegate);

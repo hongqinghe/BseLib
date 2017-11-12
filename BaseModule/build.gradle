@@ -32,7 +32,7 @@ dependencies {
     testImplementation rootProject.ext.dependencies["junit"]
     androidTestImplementation rootProject.ext.dependencies["runner"]
     androidTestImplementation rootProject.ext.dependencies["espresso-core"]
-
+//    api 'tdf.zmsoft.library:tdf-login-test:0.3.3'
     api(rootProject.ext.dependencies["butterknife"]) {
         exclude module: 'suppoer-comcompat'
         exclude module: 'support-annotations'
@@ -41,5 +41,5 @@ dependencies {
     api rootProject.ext.dependencies["javax.annotation"]
     api rootProject.ext.dependencies["dagger2"]
     annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
-
+//    provided 'org.greenrobot:eventbus:3.0.0'
 }
