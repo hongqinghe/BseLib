@@ -1,33 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
 <string name="yuan_format">元/###</string>
+<string name="supply_purchase_price_format">%1$s元/%2$s</string>
+<string name="consult_date_limit">参考时间不得少于%d天</string>
+<string name="today_is">今天是%1$s年%2$s月%3$s日 %4$s</string>
 <string name="sms_content_num">还能输入###个字</string>
 <string name="confirm_content_del">您确认要删除[###]吗？</string>
 <string name="lbl_multi_view_size_format_home">###家</string>
+<string name="supply_text_rmb_price_unit">¥ %1$s/%2$s</string>
 <string name="supply_warehouse_content_del">确认要删除[###]吗？删除后，该仓库相关单据将无法正常操作。</string>
+<string name="generate_purchase_order_quantity">生成%1$s张采购订单</string>
 <string name="purchase_price_plan_select_num">已选择###个分组</string>
 <string name="purchase_price_plan_shop_count">门店数：###</string>
+<string name="supply_shop_count">门店数：###</string>
 <string name="purchase_price_plan_delete">确定要删除[###]进货方案吗？</string>
 <string name="supply_not_confirm_continue">还有###项原料未确认，要继续吗？</string>
 <string name="supply_not_pick_confirm_continue">还有###项原料未确认拣货，要继续吗？</string>
 <string name="supply_group_num">实拣数量(###)</string>
 <string name="supply_save_material_num">已保存原料:###项</string>
+<string name="loading_apk_please_wait">已完成 %1$s%%</string>
 <string name="bill_status_tips">提示：###</string>
 <string name="audit_title_shop">门店：###</string>
 <string name="title_supplier">供应商：###</string>
+<string name="supply_goods_barcode_brand_stock_num_format">;供应商%1$s%2$s</string>
 <string name="supply_purchase_bill_predict_date_format">要求到货日：###</string>
 <string name="title_status">状态：###</string>
 <string name="supply_purchase_bill_supplyway_format">全部原料已分配给###个供货方</string>
 <string name="supply_purchase_bill_no_supplyway_format">剩余###项待分配</string>
 <string name="supply_purchase_bill_supplyway_size_format">已分配###项</string>
 <string name="supply_refund_unit_price">单价(元/###)</string>
+<string name="price_cost">单价：%1$s元/%2$s</string>
 <string name="supply_commodity_price">单价：###</string>
+<string name="number_count">数量：%1$s%2$s</string>
 <string name="supply_refund_num">数量(###)</string>
 <string name="material_weight">重量(###)</string>
 <string name="supply_purchase_good_detail_stock_num">现有库存(###)</string>
+<string name="supply_goods_barcode_stock_num_format">%1$s(现有库存%2$s%3$s)</string>
+<string name="supply_goods_barcode_stock_num_format1">%1$s(自存%2$s%3$s%4$s)</string>
+<string name="supply_goods_barcode_stock_num_format2">%1$s(自存%2$s%3$s)</string>
 <string name="supply_reason_return_null">###原因不能为空！</string>
 <string name="supply_reason_length_limit">###原因限制在30字以内！</string>
 <string name="supply_storage_location">库位：###</string>
+<string name="supply_total_num_confirm">共  %1$s 项原料  已确认  %2$s 项</string>
+<string name="supply_total_num">共  %1$s 项原料  已拣出  %2$s 项</string>
+<string name="supply_supply_price_manage_cost_price">成本价： %1$s元/%2$s</string>
+<string name="month_item_data">日期： %1$s年%2$s月%3$s日</string>
 <string name="supply_refund_date_s">退货日期：###</string>
 <string name="valid_is_null">###不能为空，请选择！</string>
 <string name="supply_refund_msg">您没有[###]的权限</string>
@@ -41,8 +58,10 @@
 <string name="supply_processing_semi_num">产出数量(###)</string>
 <string name="supply_delete_sub_unit">###存在多个单位，需删除副单位后才能设置双单位。</string>
 <string name="supply_spec_name_s">规格：###</string>
+<string name="supply_cost_adjust_format">%1$s(规格： %2$s)</string>
 <string name="delete_goods_list_batch">确认要删除这些选中的###种原料吗？</string>
 <string name="confirm_delete">确认要删除[###]吗？</string>
+<string name="supply_purchase_stock">库存 %1$s %2$s</string>
 <string name="menu_warehouse">出品仓库：###</string>
 <string name="make_name">做法：###</string>
 <string name="use_number">消耗数量(###)</string>
@@ -50,10 +69,13 @@
 <string name="title_voucher_date_s">凭证日期：###</string>
 <string name="supply_purchase_add_cart_failed_text_tips">失败原因：###</string>
 <string name="entry_sheet_number">入库单(###)</string>
+<string name="top_instock_warehouse">入库仓库：%1$s</string>
 <string name="instock_item_date">入库日期：###</string>
 <string name="supply_goods_unit_name">单位：###</string>
 <string name="change_number">变更数量(###)</string>
+<string name="material_all_number">合计%d项</string>
 <string name="material_all_money">¥###</string>
+<string name="supply_text_rmb_price">¥###</string>
 <string name="top_adjust_warehouse">调整仓库：###</string>
 <string name="top_adjust_type">调整单类型：###</string>
 <string name="adjust_item_date">调整日期：###</string>
@@ -66,6 +88,8 @@
 <string name="stock_inventory_format">¥+###</string>
 <string name="instock_price">入库数量(###)</string>
 <string name="stock_monkey">库存金额：###元</string>
+<string name="stock_number">库存数：%1$s%2$s</string>
+<string name="stock_change_number">%1$s%2$s</string>
 <string name="supply_refund_valid_sum_bigger">不能大于###，请确认！</string>
 <string name="supply_refund_valid_sum_smaller">不能小于###，请确认！</string>
 <string name="top_warehouse">仓库：###</string>
@@ -73,6 +97,7 @@
 <string name="supply_pick_bill_warehouse_name">发货仓库：###</string>
 <string name="account_complaint_handle_time">处理时间：###</string>
 <string name="supply_link_phone">联系电话：###</string>
+<string name="provide_tax_rate">税率(%)</string>
 <string name="to_warehouse_name_format">调出仓库：###</string>
 <string name="from_warehouse_name_format">调入仓库：###</string>
 <string name="allocation_list_date_format">调拨日期：###</string>
@@ -83,6 +108,8 @@
 <string name="transfer_free_money">(含配送费¥###)</string>
 <string name="supply_purchase_bill_share_format">来自“###”的采购单</string>
 <string name="supply_supply_goods_del">确认要删除选中的###种原料吗？</string>
+<string name="supply_batch_goods_del">此处原料删除时，“进货原料设置”里的原料也将同步删除，确定要删除选中的%d种原料吗？</string>
+<string name="purchase_batch_goods_del">此处原料删除时，“供应商供应的原料”里的原料也将同步删除，确定要删除选中的%d种原料吗？</string>
 <string name="supply_purchase_bill_goods_num">目前供应###种原料</string>
 <string name="goods_num">###种原料</string>
 <string name="supply_stock_bill_goods_num">###项</string>
@@ -90,6 +117,7 @@
 <string name="group_list_and_pick_date">拣货日期：###</string>
 <string name="group_and_require_date_item">拣货日期：###</string>
 <string name="supply_goods_num">供应###种原材料</string>
+<string name="shelf_delete_good_tip">确认要从货架【%1$s】上删除[%2$s]吗？</string>
 <string name="del_aisle_sure">确认要删除[###]通道吗？</string>
 <string name="supply_audit_type">单据类型：###</string>
 <string name="supply_audit_status_upload">单据状态：###</string>
@@ -103,15 +131,18 @@
 <string name="supply_package_num">包装数量(###)</string>
 <string name="supply_order_min_num">起订数量(###)</string>
 <string name="supply_order_max_num">限购数量(###)</string>
+<string name="supply_purchase_min_num">限购数量： %1$s%2$s</string>
 <string name="supply_commodity_not_sale_save_confirm_not_complete">###信息未填写完整，暂时不能上架。是否保存为下架状态？</string>
-<string name="supply_text_rmb_price">¥###</string>
+<string name="supply_batch_cancel_setup_hint">确认不需要设置选中的%d种原料的平台可销售数量吗？</string>
 <string name="supply_text_rmb_price1">¥ ###</string>
 <string name="supply_text_rmb_price2">-¥###</string>
 <string name="supply_deposit_sum">需缴纳保证金¥###</string>
 <string name="supply_client_name">客户：###</string>
+<string name="supply_tag_length_limit">标签名称最多%d个字</string>
 <string name="supply_refund_bill_money">退款金额：###</string>
 <string name="supply_setting_sum">已设置###项</string>
 <string name="supply_amp_searching">正在搜索：###</string>
+<string name="supply_lbs_shop_pos_info">经度： %1$s，纬度：%2$s</string>
 <string name="supply_receipt_name">收货人：###</string>
 <string name="supply_receipt_address">收货地址：###</string>
 <string name="supply_purchase_cart_store_goods_num">共###件，合计：</string>
@@ -133,25 +164,34 @@
 <string name="supply_purchase_match_failed">未匹配商品(###)</string>
 <string name="supply_purchase_sell_num">销量：###</string>
 <string name="supply_purchase_quality_shop_manage">主营类目：###</string>
+<string name="supply_purchase_quality_shop_price">¥ %1$s起送/配送费¥ %2$s</string>
 <string name="supply_purchase_quality_shop_preferential">订单满###元免配送费</string>
 <string name="supply_purchase_transfer_fee">配送费###元</string>
+<string name="supply_purchase_transfer_fee_free">配送费 %1$s元，还差%2$s元免配送费</string>
 <string name="account_complaint_type">投诉类型：###</string>
 <string name="account_complaint_time">投诉时间：###</string>
 <string name="account_complaint_status_value">投诉状态：###</string>
 <string name="account_complaint_op_time">最近处理时间：###</string>
 <string name="account_complaint_handle_type">处理方式：###</string>
 <string name="title_supply_goods_setting_num">已设置###种原料</string>
-<string name="supply_shop_count">门店数：###</string>
 <string name="supply_message_dialog_delete">确定要删除[###]供货方案吗？</string>
 <string name="supply_goods_number">供应###种原料</string>
+<string name="estimated_turnover_date">%1$s~%2$s</string>
 <string name="estimated_turnover_operate_time">最近一次保存：###</string>
+<string name="title_consult_date">参考时期：%1$s-%2$s</string>
+<string name="title_estimated_date">预估时期：%1$s-%2$s</string>
+<string name="suggest_quantity">建议采购量：%1$s%2$s</string>
 <string name="supply_create_purchase_bill_message">已按供应商生成###张“未提交”的采购单，现在去处理吗？</string>
+<string name="count_ge">%d个</string>
+<string name="default_supplier_batch_setting">已选中%d个原料，确认要统一设置默认供应商吗？</string>
 <string name="receipt_this_day_month_tip">###月累计数据统计</string>
 <string name="order_num_dot">订单号： ###</string>
 <string name="money">###元</string>
 <string name="symbol_x">x ###</string>
 <string name="money_sub">小计： ###元</string>
 <string name="money_loss">-###元</string>
+<string name="choose_data_text">%1$s年%2$s月%3$s日</string>
+<string name="choose_month_text">%1$s年%2$s月</string>
 <string name="cost_adjust_date_format">调价日期：###</string>
 <string name="cost_adjust_list_num_format">调价原料：###项</string>
 <string name="before_adjustment_price">调价前： ###</string>
@@ -159,12 +199,15 @@
 <string name="require_list_date_format">要求到货日:###</string>
 <string name="from_store_name">调出门店:###</string>
 <string name="to_store_name">调入门店:###</string>
+<string name="scale">%</string>
 <string name="item_customer_number">客户数：###</string>
+<string name="purchase_price_plan_name_now">当前使用 %1$s方案： %2$s</string>
 <string name="customer_visitort_detail">区域###</string>
 <string name="customer_name_all_2">客户名称：###</string>
 <string name="customer_identifier_code_2">客户编码：###</string>
 <string name="customer_group_now">当前所在分组：###</string>
 <string name="customer_group_save_tip">所选分组其中有###个客户已设置了分组，是否将本次设置否替换历史设置？</string>
+<string name="response_mail_os">Android  %1$s，版本 %2$s</string>
 <string name="welcome_jump_title">###  跳过</string>
 <string name="finance_system_abstract_title">###凭证摘要设置</string>
 <string name="finance_system_abstract_setting_tips">提示：财务人员根据企业管理的需要进行单据摘要要素的选择，生成的摘要按照按钮开启的结果从上到下依次排序，中间用半角逗号隔开。\r\n###</string>
@@ -175,6 +218,7 @@
 <string name="title_status_upload_s">上传状态：###</string>
 <string name="title_voucher_type_s">凭证类型：###</string>
 <string name="supply_voucher_no">凭证编号：###</string>
+<string name="supply_voucher_acc_point">▪ %1$s：%2$s</string>
 <string name="supply_voucher_capital">大写合计：###</string>
 <string name="supply_voucher_summary">摘要：###</string>
 <string name="supply_voucher_subject_name">科目名称：###</string>
@@ -186,20 +230,26 @@
 <string name="material_num">原料数：###项</string>
 <string name="shop_num_format">###家门店</string>
 <string name="merge_order_num">合并单数：###单</string>
+<string name="supply_purchase_bill_share_content_format">“%1$s”向“%2$s”采购的采购单</string>
+<string name="order_record_share_content_format">“%1$s”向“%2$s”采购的订货记录</string>
 <string name="used_goods">已使用商品：###</string>
 <string name="use_product_cost">消耗：###</string>
 <string name="unit_account">・结账单位：###</string>
 <string name="unit_buy_account">・点菜单位：###</string>
 <string name="base_format">###</string>
 <string name="supply_purchase_pay_success_time_tips">，###秒后将自动跳转订单详情。</string>
+<string name="widget_function_dialog_tips">此功能在%1$s%2$s</string>
 <string name="app_name">二维火供应链</string>
 <string name="add">添加</string>
 <string name="edit">编辑</string>
 <string name="delete">删除</string>
 <string name="confirm">确定</string>
+<string name="widget_sure">确定</string>
 <string name="operation_confirm">确认</string>
+<string name="widget_right_filter_sure">确认</string>
 <string name="submit">提交</string>
 <string name="go_back">返回</string>
+<string name="widget_back">返回</string>
 <string name="yes">是</string>
 <string name="no">否</string>
 <string name="version_introduction">版本介绍</string>
@@ -210,7 +260,9 @@
 <string name="yuan">元</string>
 <string name="goods_money_view">元/</string>
 <string name="time_morning">上午</string>
+<string name="widget_time_morning">上午</string>
 <string name="time_afternoon">下午</string>
+<string name="widget_time_afternoon">下午</string>
 <string name="wheel_one">1月</string>
 <string name="wheel_two">2月</string>
 <string name="wheel_three">3月</string>
@@ -336,6 +388,7 @@
 <string name="purchase_bill_detail_size_max">一张采购单最多允许采购200种原料。</string>
 <string name="purchase_bill_edit_select_supplier">请先选择供应商！</string>
 <string name="category">分类</string>
+<string name="widget_right_type_category">分类</string>
 <string name="supply_btn_confirm_start">开始确认采购原料</string>
 <string name="supply_btn_confirm_continue">继续确认采购原料</string>
 <string name="supply_btn_stock_in_start">开始验收</string>
@@ -357,9 +410,11 @@
 <string name="bill_status_wait_call_out">待调出</string>
 <string name="bill_status_wait_call_in">待调入</string>
 <string name="bill_status_refuse_call_out">拒绝调出</string>
+<string name="allocate_out_reject">拒绝调出</string>
 <string name="bill_status_confirm_out">确认调出</string>
 <string name="bill_status_confirm_in">确认调入</string>
 <string name="bill_status_refuse_call_in">拒绝调入</string>
+<string name="allocate_in_reject">拒绝调入</string>
 <string name="bill_status_refunding">退货中</string>
 <string name="bill_status_refund_complete">退货完成</string>
 <string name="bill_status_transfer_unCommit">待发货</string>
@@ -373,6 +428,7 @@
 <string name="bill_status_processing_complete">加工完成</string>
 <string name="bill_status_allocateing">调拨中</string>
 <string name="allocation_complete">调拨完成</string>
+<string name="allocate_complete">调拨完成</string>
 <string name="allocation_refuse">拒绝调拨</string>
 <string name="allocate_reject">拒绝调拨</string>
 <string name="supply_purchase_confirm">确认采购</string>
@@ -448,8 +504,10 @@
 <string name="supply_confirm_send">确认配送原料</string>
 <string name="supply_confirm_pick">确认拣货原料</string>
 <string name="supply_speak_finish">说完了</string>
+<string name="widget_supply_speak_finish">说完了</string>
 <string name="supply_speak_repeat">点击重说</string>
 <string name="supply_voice_title">请说出原料名称</string>
+<string name="widget_supply_voice_title">请说出原料名称</string>
 <string name="not_select_all">全不选</string>
 <string name="select_all">全选</string>
 <string name="supply_purchase_price_none">未设置</string>
@@ -474,6 +532,7 @@
 <string name="supply_price_edit_goods_price_gt_max">单价过小(小于0.01)，不能更改！</string>
 <string name="instock_check_price_0">单价不能为0，请重新输入！</string>
 <string name="instock_check_price_max">单价不能超过999999.99！</string>
+<string name="good_price_more_than">单价不能超过999999.99！</string>
 <string name="instock_check_number_0">入库数量(入库单位)不能为0，请重新输入！</string>
 <string name="instock_check_number_max">入库数量不能超过999999.99！</string>
 <string name="instock_check_weight_null">入库重量不能为空，请输入！</string>
@@ -505,6 +564,7 @@
 <string name="supply_purchase_price_plan_price_none">进货价不能为空！</string>
 <string name="supply_purchase_price_plan_name">默认进货价</string>
 <string name="supply_purchase_price_plan_detail">注：未设置进货价的门店使用此处默认进货价</string>
+<string name="purchase_default_price_plan">注：未设置进货价的门店使用此处默认进货价</string>
 <string name="supply_purchase_price_plan_count">进货价方案数</string>
 <string name="supply_suit_store">适用门店</string>
 <string name="supply_purchase_price_export_check_content">暂时没有可导出的进货价信息。</string>
@@ -580,6 +640,7 @@
 <string name="supply_not_save_new">已选择的原料还未保存，要保存吗？</string>
 <string name="supply_not_save_confirm">内容有变更尚未保存，确定要退出吗？</string>
 <string name="supply_goods_sum_max">单据原料总数不能超过200！</string>
+<string name="allocation_error_material_limt">单据原料总数不能超过200！</string>
 <string name="supply_shop_refund_store">退货接收仓库</string>
 <string name="valid_shop_refund_store_is_null">退货接收仓库不能为空，请选择！</string>
 <string name="shop_refund_store">分仓接收退货</string>
@@ -589,9 +650,9 @@
 <string name="supply_refund_voucher">退货凭证</string>
 <string name="supply_audit_refund">审核处理退货单</string>
 <string name="purchaser">采购方</string>
+<string name="select_dispatch_shop_title">采购方</string>
 <string name="title_purchaser_dot">采购方：</string>
 <string name="dispatch_shop_and_all">采购方：全部</string>
-<string name="select_dispatch_shop_title">采购方</string>
 <string name="purchaser_type">采购方类型</string>
 <string name="refund_party">退货方</string>
 <string name="refund_party_type">退货方类型</string>
@@ -653,7 +714,6 @@
 <string name="supply_processing_delete">确认要删除该加工单吗？</string>
 <string name="supply_processing_good_num_more_than">数量不能超过999999.99，请确认！</string>
 <string name="good_price_less_null">单价不能为空，请输入！</string>
-<string name="good_price_more_than">单价不能超过999999.99！</string>
 <string name="good_num_less_null">数量不能为0，请输入！</string>
 <string name="good_num_less_zero">数量不能为0！</string>
 <string name="good_num_more_than">数量不能超过999999.99！</string>
@@ -696,7 +756,6 @@
 <string name="tip_check_sdcard_saveGoods">无法保存上传的原料图片，请检查SD卡是否挂载</string>
 <string name="tip_upload_goods_image_process">正在上传原料图片.....</string>
 <string name="goods_icon_info">图片尺寸：小于等于200K</string>
-<string name="sub_unit_memo">注：主单位建议设置原料的最小规格单位。\r\n例如主单位是ml，副单位是瓶，1瓶=500ml，此时换算关系应是"1瓶=500ml"</string>
 <string name="stock_flg">设置为库存查看时的单位</string>
 <string name="stock_flg_memo">当不设置库存查看单位时，默认主单位为库存查看单位，且只能设置一个库存查看单位！</string>
 <string name="valuation_flag">设置为计价单位</string>
@@ -910,8 +969,10 @@
 <string name="stock_adjustment_order_no">调整单号</string>
 <string name="stock_adjustment_material">调整原料</string>
 <string name="stock_adjustment_print">打印</string>
+<string name="print">打印</string>
 <string name="stock_adjustment_save_confirm">保存并确认收货</string>
 <string name="stock_adjustment_save_submit">保存并提交</string>
+<string name="save_submit">保存并提交</string>
 <string name="stock_adjustment_material_adjust_unit">调整单位</string>
 <string name="stock_adjustment_material_adjust_reason">调整原因</string>
 <string name="stock_inventory_detail_inventory_no">盘存单号</string>
@@ -935,6 +996,7 @@
 <string name="adjusted">已调整</string>
 <string name="edit_text_select">请选择</string>
 <string name="edit_text_require">必填</string>
+<string name="widget_edit_text_require">必填</string>
 <string name="edit_text_common">可不填</string>
 <string name="instock_check_warehouse_null">请选择入库仓库！</string>
 <string name="instock_check_warehouse_repeat">分仓不能与主仓重复，请重新选择</string>
@@ -949,6 +1011,7 @@
 <string name="instock_check_refuse_authority">您没有[拒绝收货]权限</string>
 <string name="instock_check_confirm_authority">您没有[确认收货]权限</string>
 <string name="instock_check_reconfirm_authority">您没有[反确认]权限</string>
+<string name="supply_dispatch_reverse_confirm_deliver_goods_action_none">您没有[反确认]权限</string>
 <string name="confirm_delete_tip">确认要删除入库单吗？</string>
 <string name="instock_check_warehouse">分仓不能超过4个</string>
 <string name="instock_check_warehouse_not_add_goods">请先添加原料才能进行分仓！</string>
@@ -983,7 +1046,8 @@
 <string name="instock_warehouse_delete_tip">确认要删除该分仓吗？</string>
 <string name="instock_warehouse_num">已经没有可分仓原料，不能再添加分仓！</string>
 <string name="valid_refund_store_divide_zero">已经没有可分仓原料，不能再添加新的分仓！</string>
-<string name="instock_null"/>
+<string name="instock_null">提示：\n1.预估时期为想要备货的时间段（一般为本次订货日到下次订货日，加安全存量期），支持预估未来一个月的营业额。</string>
+<string name="supply_price_blank">提示：\n1.预估时期为想要备货的时间段（一般为本次订货日到下次订货日，加安全存量期），支持预估未来一个月的营业额。</string>
 <string name="stock_goods_not_add_tip">有未添加的原料，需要先添加原料再开始验收</string>
 <string name="stock_goods_not_add">待添加原料</string>
 <string name="shop_dispatch_list">配送发货单</string>
@@ -1034,18 +1098,13 @@
 <string name="store_allocate_detail">店间调拨单详情</string>
 <string name="store_allocate_export">店间调拨单导出</string>
 <string name="store_allocate_delete_hint">确认要删除该调拨单吗？</string>
+<string name="delete_module_allocate_bill">确认要删除该调拨单吗？</string>
 <string name="store_allocate_shop_same_error">调出门店和调入门店不能是同一家门店！</string>
 <string name="store_allocate_out_hint">确认该调拨单的原料已经全部调出？</string>
 <string name="store_allocate_in_hint">确认该调拨单的原料已经全部调入？</string>
 <string name="store_allocate_empty_material_hint">请先添加需要调拨的原料！</string>
 <string name="store_allocate_submit_hint">确认要提交该调拨单吗？</string>
-<string name="allocation_error_material_limt">单据原料总数不能超过200！</string>
 <string name="allocation_detail">调拨单详情</string>
-<string name="allocate_complete">调拨完成</string>
-<string name="allocate_out_reject">拒绝调出</string>
-<string name="allocate_in_reject">拒绝调入</string>
-<string name="save_submit">保存并提交</string>
-<string name="print">打印</string>
 <string name="allocate_no">调拨单号</string>
 <string name="from_warehouse_name">调出仓库</string>
 <string name="from_store">调出门店</string>
@@ -1093,7 +1152,6 @@
 <string name="allocation_add">添加调拨单</string>
 <string name="dispatch_material">配送原料</string>
 <string name="delete_module_transfer_bill">确认要删除该配送单吗？</string>
-<string name="delete_module_allocate_bill">确认要删除该调拨单吗？</string>
 <string name="dispatching_no">配送单号</string>
 <string name="transfer_history_detail">历史配送单详情</string>
 <string name="transfer_shop_detail">门店配送单详情</string>
@@ -1126,10 +1184,7 @@
 <string name="custom">自定义</string>
 <string name="transfer_add_goods">添加配送原料...</string>
 <string name="allocate_add_goods">添加调拨原料...</string>
-<string name="goods_total_view">合计 </string>
 <string name="supply_total_money">合计：</string>
-<string name="goods_money_total_view"> 项 </string>
-<string name="goods_num_total_view"> 张 </string>
 <string name="supply_input">导入</string>
 <string name="all_brand">全部品牌</string>
 <string name="all_type">全部类别</string>
@@ -1154,7 +1209,6 @@
 <string name="good_widget_more_than">重量不能超过999999.99!</string>
 <string name="good_widget_less_than">重量不能小于-999999.99!</string>
 <string name="transfer_goods_category">配送原料分类</string>
-<string name="supply_dispatch_reverse_confirm_deliver_goods_action_none">您没有[反确认]权限</string>
 <string name="allocate_list_help">出入库-仓库间调拨单列表</string>
 <string name="allocate_detail_help">出入库-仓库间调拨单</string>
 <string name="transfer_list_help">出入库-门店配送单列表</string>
@@ -1192,7 +1246,6 @@
 <string name="warehouse_order_manager">库位管理</string>
 <string name="supply_warehouse_edit_is_shop">设置为向门店的供货仓库</string>
 <string name="supply_warehouse_edit_is_shop_tip">只有打开此项后，门店在添加采购、入库等单据，请选择供应商时才可选择该仓库</string>
-<string name="warehouse_order_tips">提示：\n\t\t在采购单、配送单等单据中，如果需要按库位进行原料排序，请通过"库位管理"设置库位。\n\t\t库位由通道和货架构成，一个通道包含多个货架，一个货架可存放多种原料。（建议根据原料的存放位置大小来划分货架，一个货架内的原料不宜过多。）\n\t\t例如：通道有两条，分别为1，2，顺序为1-&gt;2;每条通道含3个货架A，B，C，和D，E，F，顺序为A-&gt;B-&gt;C和D-&gt;E-&gt;F。\n\t\t将配送单的配送原料排序后，原料的显示顺序为1A-&gt;1B-&gt;1C-&gt;2D-&gt;2E-&gt;2F。</string>
 <string name="supply_goods_input">从供应商供应的原料导入</string>
 <string name="supply_goods_list_input">供应商供应的原料</string>
 <string name="supply_goods_input_sure">确定要导入该供应商的原料吗？</string>
@@ -1264,8 +1317,6 @@
 <string name="supply_vendor_settlement_bill_type_settled">已结算</string>
 <string name="audit_title_type_shop">门店入库/退货单(统)</string>
 <string name="audit_title_type_shop2">门店入库/退货单(独)</string>
-<string name="audit_title_type_shop3"> 入库/退货单(总部)</string>
-<string name="audit_title_type_shop4"> 入库/退货单(供应商)</string>
 <string name="supply_audit_refund_date">收货日期</string>
 <string name="supply_cost_price_edit_audit_price_gt_min">单价不能为0，请确认！</string>
 <string name="supply_bill_group_commit_action_none">您没有[确认提交]的权限</string>
@@ -1309,6 +1360,7 @@
 <string name="supply_commodity_photo">商品图片</string>
 <string name="supply_commodity_photo_add">添加图片</string>
 <string name="supply_commodity_photo_info">图片尺寸：不小于400*300px(像素)，大小不超过2M</string>
+<string name="tip_upload_goods_icon_size">图片尺寸：不小于400*300px(像素)，大小不超过2M</string>
 <string name="supply_relate_goods">相关规格原料</string>
 <string name="supply_package_price">包装销售价格</string>
 <string name="supply_relate_goods_add">添加其他规格原料...</string>
@@ -1401,10 +1453,7 @@
 <string name="good_platform_num_more_than">平台可销售数量不能超过999999！</string>
 <string name="supply_my_shop_setting_title">店铺设置</string>
 <string name="supply_upload_banner_title">上传海报</string>
-<string name="tip_upload_goods_icon_size">图片尺寸：不小于400*300px(像素)，大小不超过2M</string>
 <string name="supply_shop_setting_platform_num">实际库存作为平台可销售数量</string>
-<string name="supply_shop_setting_platform_num_memo">打开此项后，平台销售商品的可销售数量直接使用实际库存数量，
-        销售商品时只扣减实际库存；关闭此项后，需设置各商品的平台可销售数量，销售商品时，会同时扣减实际库存和平台可销售数量。</string>
 <string name="supply_upload_banner_memo">注：店铺海报最多允许上传5张</string>
 <string name="set_the_default_shipping_cost">设置默认配送费用(元)</string>
 <string name="set_the_minimum_shipping_cost">订单最低购买金额(元)</string>
@@ -1432,7 +1481,6 @@
 <string name="supply_amp_auto_address">正在定位，请耐心等待</string>
 <string name="supply_amp_long_check">正在处理，请耐心等待</string>
 <string name="supply_map_permission_fine_location_null_setting">地图定位功能需要打开您手机的GPS开关</string>
-<string name="supply_map_permission_fine_location_null">"二维火供应链"已被禁止使用定位权限，请在您的手机设置中更改应用的权限</string>
 <string name="supply_map_select_tip">点击选中您搜索到的位置，长按选择其他位置</string>
 <string name="supply_error_other">未知错误，请稍后重试！错误码为</string>
 <string name="supply_no_result">对不起，没有搜索到相关数据！</string>
@@ -1697,7 +1745,6 @@
 <string name="supply_goods_import_sure">确定要导入该供货仓库供应的原料吗？</string>
 <string name="supply_goods_import_empty_tips">该供货仓库没有原料可以导入</string>
 <string name="supply_price_unit">供货价(元)</string>
-<string name="supply_price_blank"/>
 <string name="supply_price_plan_name">供货价方案名称</string>
 <string name="supply_price_start_date">开始生效时间</string>
 <string name="supply_price_is_null">销售价不能为空，请确认！</string>
@@ -1713,6 +1760,7 @@
 <string name="supply_price_plan_is_null">供货价方案名称不能为空！</string>
 <string name="no_tip_default">选择不再提醒，每次都会保存已选择的原料</string>
 <string name="no_tip">不再提醒</string>
+<string name="widget_no_longer_remind">不再提醒</string>
 <string name="not_save">不保存</string>
 <string name="supply_import_success">导入成功！</string>
 <string name="ellipsis">...</string>
@@ -1734,11 +1782,6 @@
 <string name="next_week">下周</string>
 <string name="next_month">下月</string>
 <string name="turnover_influence_factor_setting">设置营业额影响金额</string>
-<string name="estimated_shop_turnover_memo">提示：
-        \n1、预估时期为想要备货的时间段（一般为本次订货日到下次到货日，加安全存量期），支持预估未来一个月的营业额。
-        \n2、参考时期可自行设置，一般大于一个月
-        \n3、营业额影响因素可不设置，系统默认把天气、节假日因素考虑在内，如有其他影响营业额的情况，可以设置相应的影响金额。
-        \n4、下周表示未来7天，下月表示未来30天，上月表示过去30天</string>
 <string name="title_turnover_influence">对营业额的影响(元)</string>
 <string name="title_turnover_last_week">上周同日营\n业额(千元)</string>
 <string name="title_turnover_estimated">预估值\n(千元)</string>
@@ -1747,13 +1790,8 @@
 <string name="valid_turnover_is_null">调整后的值不能为空，请确认！</string>
 <string name="valid_turnover_is_zero">调整后的值不能为0，请确认！</string>
 <string name="title_estimated_thousand_dosage">千元用量预估</string>
-<string name="estimated_thousand_dosage_memo">提示：
-        \n1、参考时段根据具体业务情况自行选择，默认为上月，最长不超过3个月。
-        \n2、计算公式：千元用量=每种原料的耗用总数/总营业额*1000
-        \n3、上月表示过去30天</string>
 <string name="title_turnover_estimated_value">预估值</string>
 <string name="title_suggest_quantity">原料建议采购量</string>
-<string name="title_suggest_quantity_memo">注：建议采购量 = 预估总营业额/1000*千元用量 - 现有库存 - 采购中数量 - 待入库数量</string>
 <string name="supply_proposal_num">建议采购量</string>
 <string name="supplier_not_set">未设置默认供应商</string>
 <string name="supplier_not_set_can_not_select">未设置默认供应商的原料暂时无法采购</string>
@@ -1761,10 +1799,8 @@
 <string name="suggest_quantity_detail">建议采购量详情</string>
 <string name="supply_cycle">周期</string>
 <string name="supply_cycle_consumption">周期用量</string>
-<string name="supply_cycle_consumption_memo">注：周期用量=预估周期总营业额/1000*千元用量</string>
 <string name="supply_purchase_num">采购中数量</string>
 <string name="supply_storage_num">待入库数量</string>
-<string name="supply_proposal_num_memo">注：建议采购量=周期用量-现有库存-采购中数量-待入库数量</string>
 <string name="supply_goods_proposal_num">原料采购量</string>
 <string name="valid_proposal_num_is_null">原料采购量不能为空，请确认！</string>
 <string name="valid_proposal_num_is_zero">原料采购量不能为0，请确认！</string>
@@ -1782,10 +1818,14 @@
 <string name="default_supplier_batch">批量设置默认供应商</string>
 <string name="btn_name_set">设置</string>
 <string name="filter">筛选</string>
+<string name="widget_right_type_filter">筛选</string>
 <string name="supply_head_is_lock">连锁总部未开通供应链功能，无法将其添加为供应商。</string>
 <string name="supply_share_weixin">微信好友</string>
+<string name="widget_supply_share_weixin">微信好友</string>
 <string name="supply_share_link">复制链接</string>
+<string name="widget_supply_share_link">复制链接</string>
 <string name="supply_share_qq">QQ好友</string>
+<string name="widget_supply_share_qq">QQ好友</string>
 <string name="campaign_detail">活动详情</string>
 <string name="receipt_details_shop">店铺收款明细</string>
 <string name="receipt_record_details">收款记录详情</string>
@@ -1813,10 +1853,6 @@
 <string name="platform_shutdown">平台关闭</string>
 <string name="status_err">未知状态</string>
 <string name="subtotal">小计</string>
-<string name="total_transaction_amount">商品合计金额： </string>
-<string name="total_transfer_fee_amount">配送费金额： </string>
-<string name="total_refund_amount">总退款金额： </string>
-<string name="deduct_commission">手续费扣除： </string>
 <string name="gross_income">总收入：</string>
 <string name="err_data_default">--.--</string>
 <string name="select_data">选择时间</string>
@@ -1871,7 +1907,6 @@
 <string name="selling_material_scheme_setting">原料销售价设置</string>
 <string name="customer_group">客户分组</string>
 <string name="customer_group_max_tip">分组数量已达上限！</string>
-<string name="purchase_default_price_plan">注：未设置进货价的门店使用此处默认进货价</string>
 <string name="group_select">选择分组</string>
 <string name="group_default">默认分组</string>
 <string name="selling_setting_scheme_delete_tip">是否确认删除当前销售价方案</string>
@@ -2080,6 +2115,7 @@
 <string name="function_search_no_result">未查到您搜索的功能</string>
 <string name="title_function_edit">编辑功能</string>
 <string name="pack_up">收起</string>
+<string name="widget_shrink">收起</string>
 <string name="change_background">更换背景</string>
 <string name="lbl_sender_sex_man">男</string>
 <string name="lbl_sender_sex_female">女</string>
@@ -2150,8 +2186,6 @@
 <string name="order_record_link_copy">订货记录链接已经复制好了！</string>
 <string name="no_default_supply">无默认供应商</string>
 <string name="no_default_warehouse">无默认发货仓库</string>
-<string name="lbl_shop_lose_change_stock_num_memo">打开此项后，总部配送到门店，门店可按实际收货更改入库数量。
-        若不允许这种情况，请关闭此项。（向第三方供应商采购入库或直接添加入库单时不影响）</string>
 <string name="lbl_shop_lose_change_stock_num">允许门店更改入库数量</string>
 <string name="lbl_shop_lose_purchase_clearing_time_memo">设置了截止时间后，超过截止时间后当日不能再提交需要总部审核的采购单。</string>
 <string name="lbl_shop_lose_purchase_clearing_time">门店每日提交采购单截止时间</string>
@@ -2179,15 +2213,12 @@
 <string name="sure_create_purchase_bill">确认生成采购订单？</string>
 <string name="material_purchase_null">未添加任何商品，请前往“二维火掌柜”添加商品。</string>
 <string name="back_remind_message">确定放弃当前页面操作？</string>
-<string name="estimate_commodity_sales_memo">提示：\n1.下周表示未来7天，下月表示未来30天
-        \n2.销售预估销量=预估营业额 X (近一月商品销量/近一月营业额)</string>
-<string name="shop_turnover_estimate_memo">提示：\n1.预估时期为想要备货的时间段（一般为本次订货日到下次订货日，加安全存量期），支持预估未来一个月的营业额。
-        \n2.计算方式：系统默认结合天气、节假日等因素以及环比、同比分析，采用移动平均的算法计算而来
-        \n3.下周表示未来7天，下月表示未来30天，支持预估未来一个月内营业额
-    </string>
 <string name="clear_date">清空日期</string>
+<string name="widget_clear_date">清空日期</string>
 <string name="btn_pic">■   </string>
+<string name="widget_btn_pic">■   </string>
 <string name="zero_point_zeros">0.00</string>
+<string name="widget_zero_point_zeros">0.00</string>
 <string name="estimate_commodity_sales_btn">估算所选时间段销量</string>
 <string name="create_material_purchase_null">没有要采购的商品</string>
 <string name="shop_name_memo">一旦审核通过店铺名称不允许再次修改！</string>
@@ -2200,12 +2231,9 @@
 <string name="widget_people_background_image_size">图片尺寸:不小于400*300px(像素)</string>
 <string name="widget_people_background_image_style">图片格式：jpg/png格式</string>
 <string name="widget_wx_download_progress">正在下载...</string>
-<string name="widget_edit_text_require">必填</string>
 <string name="widget_cancel">取消</string>
-<string name="widget_sure">确定</string>
 <string name="widget_un_login">退出</string>
 <string name="widget_i_know">我知道了</string>
-<string name="widget_back">返回</string>
 <string name="widget_about">关于</string>
 <string name="widget_customer">客服</string>
 <string name="widget_function_isshow">显示</string>
@@ -2214,22 +2242,11 @@
 <string name="widget_function_showtype_main">首页</string>
 <string name="widget_function_showtype_left">左侧栏</string>
 <string name="widget_edit_view">文本编辑(自定义)</string>
-<string name="widget_zero_point_zeros">0.00</string>
-<string name="widget_btn_pic">■   </string>
 <string name="widget_dialog_title_name">提示</string>
-<string name="widget_clear_date">清空日期</string>
 <string name="widget_clear_time">清空时间</string>
-<string name="widget_right_type_filter">筛选</string>
 <string name="widget_right_type_filter_title">筛选条件</string>
 <string name="widget_right_filter_rest">重置</string>
-<string name="widget_right_filter_sure">确认</string>
 <string name="widget_title_kindmenu_manage">分类管理</string>
-<string name="widget_right_type_category">分类</string>
-<string name="widget_supply_speak_finish">说完了</string>
-<string name="widget_supply_voice_title">请说出原料名称</string>
-<string name="widget_supply_share_weixin">微信好友</string>
-<string name="widget_supply_share_link">复制链接</string>
-<string name="widget_supply_share_qq">QQ好友</string>
 <string name="widget_btn_common_redo">重新连接</string>
 <string name="widget_tip_net_exception">网络异常。</string>
 <string name="widget_input_name">输入名字</string>
@@ -2237,9 +2254,5 @@
 <string name="widget_scanToSignin">手机扫码 安全登录</string>
 <string name="widget_scanToSigninTip">支持扫码快速登录二维火取餐、二维火\n叫号、二维火服务生手机版等应用</string>
 <string name="widget_scanToSigninError">对不起客官, 您扫描的二维码不支持登录</string>
-<string name="widget_time_morning">上午</string>
-<string name="widget_time_afternoon">下午</string>
 <string name="widget_read">我已阅读并同意以上说明</string>
-<string name="widget_no_longer_remind">不再提醒</string>
-<string name="widget_shrink">收起</string>
 </resources>

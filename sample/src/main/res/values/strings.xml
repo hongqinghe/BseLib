@@ -2,6 +2,7 @@
     <string name="app_name">BaseLib</string>
     <string name="string_format">%s年</string>
     <string name="string_no_format">%年,%s</string>
-    <string name="price_cost">单价：%1$s元/%2$s</string>
+    <string name="price_cost" formatted="true">单价：%s元/%s</string>
     <string name="today_is">今天是%s年%s月%s日 %s</string>
+    <string name="purchase_price_plan_name_now">当前使用%s方案：%s</string>
 </resources>
