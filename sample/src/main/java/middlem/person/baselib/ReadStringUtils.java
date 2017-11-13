@@ -10,7 +10,6 @@ import org.xml.sax.SAXException;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
@@ -31,7 +30,12 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
 /***********************************************
- * <P> desc:
+ * <P> desc:   思路：1：先读取ios和android源文件并进行分类（format和noFormat），
+ *                  将各自noFormat文件分别写入ios和android各自对应的文件中，这里使用统一的android文件为基，
+ *                  所以同时将format文件写入android对应的文件中
+ *              2：比较全部文件ios和android中的不同，写入compare文件中，然后比较format文件，
+ *              并将format文件分别写入ios和android各自对应的文件中，
+ *              3：
  * <P> Author: gongtong
  * <P> Date: 2017/11/9 10:17
  ***********************************************/
@@ -50,6 +54,14 @@ public class ReadStringUtils {
      */
     private static final int TYPE_SAME = 0x2;
     /**
+     * All
+     */
+    private static final int TYPE_ALL = 0x4;
+
+    private static final String CHILD_NODE1="string";
+
+    private static final String CHILD_NODE2="string-array";
+    /**
      * android 源文件集合
      */
     private static Map<String, String> androidList;
@@ -61,6 +73,10 @@ public class ReadStringUtils {
      * 暂存文件集合
      */
     private static Map<String, String> tempList;
+    /**
+     * 暂存文件集合
+     */
+    private static Map<String, String> iosTempList;
     /**
      * 比较后的存在相同文件的集合
      */
@@ -74,9 +90,17 @@ public class ReadStringUtils {
      */
     private static Map<String, String> noFormatList;
     /**
+     * 字符串中带format的集合
+     */
+    private static Map<String, String> iosFormatList;
+    /**
+     * 不带format的集合
+     */
+    private static Map<String, String> iosNoFormatList;
+    /**
      * 相同String文件且不带format的文件集合
      */
-    private static final String FILE_SAME_PATH = "/Users/hehongqing/Android/middlem/BaseLib/sample/src/main/assets/androidStrings.xml";
+    private static final String FILE_SAME_PATH = "/Users/hehongqing/Android/middlem/BaseLib/sample/src/main/assets/sameStrings.xml";
     /**
      * android String文件路径(源文件)
      */
@@ -110,9 +134,12 @@ public class ReadStringUtils {
         androidList = new LinkedHashMap<>();
         iosList = new LinkedHashMap<>();
         tempList = new LinkedHashMap<>();
+        iosTempList = new LinkedHashMap<>();
         androidPareList = new LinkedHashMap<>();
         formatList = new LinkedHashMap<>();
         noFormatList = new LinkedHashMap<>();
+        iosFormatList = new LinkedHashMap<>();
+        iosNoFormatList = new LinkedHashMap<>();
         getString();
     }
 
@@ -128,29 +155,29 @@ public class ReadStringUtils {
             System.out.println("开始读取android源文件");
             for (int j = 0; j < childNodes.getLength(); j++) {
                 Node subNode = childNodes.item(j);
-                if ("string".equals(subNode.getNodeName())) {
+                if (CHILD_NODE1.equals(subNode.getNodeName())) {
                     // key
                     String key = subNode.getAttributes().getNamedItem("name")
                             .getNodeValue();
                     // value
                     String value = subNode.getTextContent();
                     if (value.contains("%")) {
-                        System.out.println("android_format的文件"+1);
+//                        System.out.println("android_format的文件+"+1);
                         formatList.put(key, value);
                     } else {
                         noFormatList.put(key, value);
-                        System.out.println("android_no_format的文件"+1);
+//                        System.out.println("android_no_format的文件+"+1);
                     }
                     androidList.put(key, value);
                 }
             }
-            System.out.println("读取android源文件成功，大小为："+androidList.size());
-            System.out.println("读取android源文件成功，并且含有format文件的string有"+ formatList.size());
-            System.out.println("读取android源文件成功，并且不含有format文件的string有"+ noFormatList.size());
+            System.out.println("读取android源文件成功，大小为：" + androidList.size());
+            System.out.println("读取android源文件成功，并且含有format文件的string有" + formatList.size());
+            System.out.println("读取android源文件成功，并且不含有format文件的string有" + noFormatList.size());
             System.out.println("android 源文件读结束");
-            iosTextReader();
             toSaveAndroidString(noFormatList, TYPE_NO_FORMAT);
             toSaveAndroidString(formatList, TYPE_FORMAT);
+            iosTextReader();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (SAXException e) {
@@ -170,18 +197,29 @@ public class ReadStringUtils {
             FileReader fileReader = new FileReader(file2);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String readLine = bufferedReader.readLine();
-           if (readLine!=null){
-               System.out.println("开始读取ios源文件");
-           }
+            if (readLine != null) {
+                System.out.println("开始读取ios源文件");
+            }
             while (readLine != null) {
-               // 去掉引号
+                // 去掉引号
                 String s3 = readLine.replaceAll("\"", "");
+                if (s3.contains("%")) {
+                    iosFormatList.put(s3, s3);
+                } else {
+                    iosNoFormatList.put(s3, s3);
+                }
                 iosList.put(s3, s3);
                 readLine = bufferedReader.readLine();
             }
+            System.out.println("读取ios源文件成功，大小为：" + iosList.size());
+            System.out.println("读取ios源文件成功，并且含有format文件的string有" + iosFormatList.size());
+            System.out.println("读取ios源文件成功，并且不含有format文件的string有" + iosNoFormatList.size());
+            System.out.println("ios 源文件读结束");
             bufferedReader.close();
             fileReader.close();
-            toCompare();
+            toCompare(iosList, TYPE_ALL);
+            toCompare(iosNoFormatList, TYPE_NO_FORMAT);
+            toIosText(iosFormatList,TYPE_FORMAT);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -190,33 +228,46 @@ public class ReadStringUtils {
     }
 
     /**
-     * 字符串比较
+     * 字符串比较(如果在android集合中，key对应的value可以取到对应的ios  value值，在生成相同的文件)
+     *
+     * @param iosList
+     * @param typeFormat
      */
-    private static void toCompare() {
-        tempList = iosList;
-        for (String key : androidList.keySet()) {
-            String value = androidList.get(key);
+    private static void toCompare(Map<String, String> iosList, int typeFormat) {
+        if (TYPE_NO_FORMAT == typeFormat) {
+            System.out.println("string 文件开始比较(noFormat) ，开始写入不同的文件");
+            tempList = noFormatList;
+        } else if (TYPE_ALL == typeFormat) {
+            System.out.println("string 文件开始比较(all) ，开始写入不同的文件");
+            tempList = androidList;
+        }
+        iosTempList = iosList;
+        for (String key : tempList.keySet()) {
+            String value = tempList.get(key);
             String txtValue = iosList.get(value);
             if (txtValue != null) {
                 androidPareList.put(key, value);
-                tempList.remove(txtValue);
+                iosTempList.remove(txtValue);
             }
         }
+        System.out.println("比较完毕，不同大小为" + iosTempList.size());
         try {
-
             File file = new File(FILE_COMPARE_PATH);
+            System.out.println("开始写入不同文件");
             FileOutputStream fileOutputStream = new FileOutputStream(file);
             OutputStreamWriter osw = new OutputStreamWriter(fileOutputStream, "utf-8");
             BufferedWriter bufferedWriter = new BufferedWriter(osw);
-            for (String s : tempList.keySet()) {
-                tempList.get(s);
-                bufferedWriter.write("\"" + tempList.get(s) + "\"");
+            for (String s : iosTempList.keySet()) {
+                iosTempList.get(s);
+                bufferedWriter.write("\"" + iosTempList.get(s) + "\"");
                 bufferedWriter.newLine();
             }
+            System.out.println("比较完毕，不同文件可以参考" + FILE_COMPARE_PATH);
             bufferedWriter.flush();
             osw.flush();
             fileOutputStream.flush();
-            toIosText();
+            //写入noFormat字符
+            toIosText(noFormatList,typeFormat);
             toSaveAndroidString(androidPareList, TYPE_SAME);
         } catch (IOException e) {
             e.printStackTrace();
@@ -225,18 +276,29 @@ public class ReadStringUtils {
 
     /**
      * 生成ios输出文档
+     *
+     * @param typeFormat
+     * @param iosList
      */
-    private static void toIosText() {
-        File file = new File(FILE_IOS_NO_FORMAT_TEXT_PATH);
+    private static void toIosText( Map<String, String> iosList,int typeFormat) {
+        File file = null;
+        if (TYPE_NO_FORMAT == typeFormat) {
+            file = new File(FILE_IOS_NO_FORMAT_TEXT_PATH);
+        } else  if (TYPE_ALL==typeFormat){
+//            file = new File(FILE_IOS_FORMAT_TEXT_PATH);
+            //不用写入文件
+            return;
+        }else {
+            file=new File(FILE_IOS_FORMAT_TEXT_PATH);
+        }
         FileOutputStream fileOutputStream = null;
         try {
             fileOutputStream = new FileOutputStream(file);
-
             OutputStreamWriter osw = new OutputStreamWriter(fileOutputStream, "utf-8");
             BufferedWriter bufferedWriter = new BufferedWriter(osw);
-            for (String s : tempList.keySet()) {
-                tempList.get(s);
-                bufferedWriter.write("\"" + tempList.get(s) + "\"" + "               =               " + "\"" + tempList.get(s) + "\"");
+            for (String s : iosList.keySet()) {
+                iosList.get(s);
+                bufferedWriter.write("\"" + iosList.get(s) + "\"" + "               =               " + "\"" + iosList.get(s) + "\"");
                 bufferedWriter.newLine();
             }
             bufferedWriter.flush();

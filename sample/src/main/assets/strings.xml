@@ -2110,7 +2110,6 @@
     <string name="response_mail_os_format">Android 版本 %s</string>
     <string name="response_mail_tip">选填，以便将反馈结果告知您</string>
     <string name="response_mail_send_sucess">意见反馈发送成功</string>
-
     <string name="wx_share_error_01">请先安装微信后再分享</string>
     <string name="wx_share_error_02">微信版本过低，请安装最新版本后重试.</string>
     <string name="qq_share_error_01">请先安装QQ后再分享</string>
@@ -2224,6 +2223,55 @@
     <string name="supply_purchase_pay_success_time_tips">，%s秒后将自动跳转订单详情。</string>
     <string name="search_history_tip">历史搜索</string>
     <string name="select_sync_shop_common_null_shop">请选择同步门店！</string>
-    <item name="tag_supply_purchase_holder" type="id" />
-    <item name="tag_supply_purchase_goodsId" type="id" />
+
+    <!--widget-->
+    <string name="widget_wx_download_progress_tips">正在下载微信，请不要关闭本应用</string>
+    <string name="widget_supply_purchase_bill_add_goods">添加采购原料</string>
+    <string name="widget_people_background_image">身份证背面图片</string>
+    <string name="widget_people_background_image_size">图片尺寸:不小于400*300px(像素)</string>
+    <string name="widget_people_background_image_style">图片格式：jpg/png格式</string>
+    <string name="widget_wx_download_progress">正在下载...</string>
+    <string name="widget_edit_text_require" translatable="false">必填</string>
+    <string name="widget_cancel">取消</string>
+    <string name="widget_sure">确定</string>
+    <string name="widget_un_login">退出</string>
+    <string name="widget_i_know">我知道了</string>
+    <string name="widget_back">返回</string>
+    <string name="widget_about">关于</string>
+    <string name="widget_customer">客服</string>
+    <string name="widget_function_isshow">显示</string>
+    <string name="widget_function_unshow">隐藏</string>
+    <string name="widget_weixin_installed">安装微信</string>
+    <string name="widget_function_showtype_main">首页</string>
+    <string name="widget_function_showtype_left">左侧栏</string>
+    <string name="widget_function_dialog_tips" formatted="false">此功能在%s%s</string>
+    <string name="widget_edit_view">文本编辑(自定义)</string>
+    <string name="widget_zero_point_zeros">0.00</string>
+    <string name="widget_btn_pic">■   </string>
+    <string name="widget_dialog_title_name">提示</string>
+    <string name="widget_clear_date">清空日期</string>
+    <string name="widget_clear_time">清空时间</string>
+    <string name="widget_right_type_filter">筛选</string>
+    <string name="widget_right_type_filter_title">筛选条件</string>
+    <string name="widget_right_filter_rest">重置</string>
+    <string name="widget_right_filter_sure">确认</string>
+    <string name="widget_title_kindmenu_manage">分类管理</string>
+    <string name="widget_right_type_category">分类</string>
+    <string name="widget_supply_speak_finish">说完了</string>
+    <string name="widget_supply_voice_title">请说出原料名称</string>
+    <string name="widget_supply_share_weixin">微信好友</string>
+    <string name="widget_supply_share_link">复制链接</string>
+    <string name="widget_supply_share_qq">QQ好友</string>
+    <string name="widget_btn_common_redo">重新连接</string>
+    <string name="widget_tip_net_exception">网络异常。</string>
+    <string name="widget_input_name">输入名字</string>
+    <string name="widget_save">保存</string>
+    <string name="widget_scanToSignin"><![CDATA[手机扫码 安全登录]]></string>
+    <string name="widget_scanToSigninTip">支持扫码快速登录二维火取餐、二维火\n叫号、二维火服务生手机版等应用</string>
+    <string name="widget_scanToSigninError">对不起客官, 您扫描的二维码不支持登录</string>
+    <string name="widget_time_morning">上午</string>
+    <string name="widget_time_afternoon">下午</string>
+    <string name="widget_read">我已阅读并同意以上说明</string>
+    <string name="widget_no_longer_remind">不再提醒</string>
+    <string name="widget_shrink">收起</string>
 </resources>

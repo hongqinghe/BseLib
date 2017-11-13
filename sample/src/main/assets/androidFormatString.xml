@@ -252,4 +252,5 @@
 <string name="unit_buy_account">・点菜单位：%s</string>
 <string name="base_format">%s</string>
 <string name="supply_purchase_pay_success_time_tips">，%s秒后将自动跳转订单详情。</string>
+<string name="widget_function_dialog_tips">此功能在%s%s</string>
 </resources>
