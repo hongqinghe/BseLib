@@ -401,8 +401,8 @@ public class ReadStringUtils {
             BufferedWriter bufferedWriter = new BufferedWriter(osw);
             for (String s : iosList.keySet()) {
                 iosList.get(s);
-                bufferedWriter.write("\"" + iosList.get(s) + "\"" + "               =               " + "\"" + iosList.get(s) + "\"");
-                bufferedWriter.newLine();
+                bufferedWriter.write("\"" + iosList.get(s) + "\"" + "               =               " + "\"" + iosList.get(s) + "\""+"\n");
+//                bufferedWriter.newLine();
             }
             bufferedWriter.flush();
             osw.flush();

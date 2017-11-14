@@ -79,7 +79,7 @@ public class MakeTxtUils {
                     String key = subNode.getAttributes().getNamedItem("name")
                             .getNodeValue();
                     // value
-                    String value = subNode.getTextContent();
+                    String value = subNode.getTextContent().trim();
 //                 System.out.println("android_no_format的文件+"+1);
                     androidList.put(key, value);
                 }
