@@ -110,9 +110,16 @@ public class MakeTxtUils {
 //                    // 去掉引号
                 String s3 = readLine.replaceAll("\"", "");
                     String[] split = s3.split("=");
+//                    split[0] = split[0].replace("\"", "");
+//                    split[1] =split[1].replace("\"", "");
+//                    split[1] =split[1].replace(";", "");
+//                    split[1] =split[1].substring(2, split[1].length());
+
+//                    String[] split = readLine.split("=");
                     String iosKey = split[0].trim();
+//                    iosKey=trimFirstAndLastChar(iosKey,"\"");
                     String iosValue = split[1].trim();
-                    iosValue.replaceAll("\"", "");
+//                    iosValue=trimFirstAndLastChar(iosValue,"\"");
                     for (String key : androidList.keySet()) {
                         String value = androidList.get(key);
                         if (value.equals(iosKey)) {
@@ -137,6 +144,40 @@ public class MakeTxtUils {
             e.printStackTrace();
         }
     }
+    public static String trimFirstAndLastChar(String source,String element){
+        boolean beginIndexFlag = true;
+        boolean endIndexFlag = true;
+        do{
+            int beginIndex = source.indexOf(element) == 0 ? 1 : 0;
+            int endIndex = source.lastIndexOf(element) + 1 == source.length() ? source.lastIndexOf(element) : source.length();
+                source = source.substring(beginIndex, endIndex-1);
+            beginIndexFlag = (source.indexOf(element) == 0);
+            endIndexFlag = (source.lastIndexOf(element) + 1 == source.length());
+        } while (beginIndexFlag || endIndexFlag);
+        return source;
+    }
+    public static String trim(String source, String beTrim) {
+        if(source==null){
+            return "";
+        }
+        source = source.trim(); // 循环去掉字符串首的beTrim字符
+        if(source.isEmpty()){
+            return "";
+        }
+        String beginChar = source.substring(0, 1);
+        if (beginChar.equalsIgnoreCase(beTrim)) {
+            source = source.substring(1, source.length());
+//            beginChar = source.substring(0, 1);
+        }
+        // 循环去掉字符串尾的beTrim字符
+        String endChar = source.substring(source.length() - 1, source.length());
+        if (endChar.equalsIgnoreCase(beTrim)) {
+            source = source.substring(0, source.length() - 1);
+//            endChar = source.substring(source.length() - 1, source.length());
+        }
+        return source;
+    }
+
     /**
      * 取出指定格式的String文件进行处理
      *

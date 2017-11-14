@@ -5,4 +5,5 @@
     <string name="price_cost" formatted="true">单价：%s元/%s</string>
     <string name="today_is">今天是%s年%s月%s日 %s</string>
     <string name="purchase_price_plan_name_now">当前使用%s方案：%s</string>
+    <string name="supply_batch_setup_hint">是否对选中的%d种原料进行“设置平台可销售数量”操作</string>
 </resources>

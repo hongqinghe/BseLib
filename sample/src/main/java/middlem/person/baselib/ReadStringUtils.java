@@ -113,6 +113,7 @@ public class ReadStringUtils {
     /**
      * android String文件路径(源文件)
      */
+//    private static final String FILE_ANDROID_SOURCE_PATH = "/Users/hehongqing/Android/middlem/BaseLib/sample/src/main/assets/strings.xml";
     private static final String FILE_ANDROID_SOURCE_PATH = "/Users/hehongqing/Android/middlem/BaseLib/sample/src/main/assets/source.xml";
     /**
      * ios String文件路径*（源文件）

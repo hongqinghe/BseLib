@@ -57,7 +57,7 @@ public class SampleActivity extends FragmentActivity {
         Demo demo = new Demo(person);
         Log.e(TAG, demo.toDo());
         Log.e(TAG, demo2.toDo());
-
+textContent.setText(getString(R.string.supply_batch_setup_hint));
 //        ReadStringUtils.getString(this);
 //        ReadStringUtils.textReader(this);
     }
@@ -74,6 +74,7 @@ public class SampleActivity extends FragmentActivity {
         System.out.println("=================="+format);
         @SuppressLint("SimpleDateFormat") SimpleDateFormat sDateFormat = new SimpleDateFormat("EEEE");
         Calendar calendar = Calendar.getInstance();
+
         textContent.setText(String.format(getString(R.string.today_is), calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH), sDateFormat.format(new Date())));
 
     }

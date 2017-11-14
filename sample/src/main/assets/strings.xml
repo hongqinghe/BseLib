@@ -439,7 +439,6 @@
     <string name="shop_refund_store">分仓接收退货</string>
     <string name="shop_refund_store_main">主退货接收仓库</string>
     <string name="supply_refund_detail_history">历史退货单详情</string>
-    <string name="supply_refund_msg">您没有[%s]的权限</string>
     <string name="have_no_permession">您没有[%s]的权限</string>
     <string name="supply_select_customer">选择客户</string>
     <string name="supply_refund_voucher">退货凭证</string>
@@ -717,7 +716,7 @@
     <string name="instock_item_date">入库日期：%s</string>
     <string name="instock_time">入库时间</string>
     <string name="material_unit">单位</string>
-    <string name="supply_goods_unit_name">单位：%s</string>
+    <string name="supply_goods_unit_name">单：%s</string>
     <string name="material_birth">生产日期</string>
     <string name="material_warehouse">主入库仓库</string>
     <string name="instock_host_warehouse">主入库仓库：</string>
@@ -1110,7 +1109,6 @@
     <string name="group_warehouse_item">拣货仓库：%s</string>
     <string name="group_and_pick_date">拣货日期</string>
     <string name="group_list_and_pick_date">拣货日期：%s</string>
-    <string name="group_and_require_date_item">拣货日期：%s</string>
     <string name="group_un_pick">待拣货</string>
     <string name="group_pick_finish">拣货完成</string>
     <string name="warehouse_order_manager">库位管理</string>
@@ -1274,7 +1272,7 @@
     <string name="supply_spec_name_is_null">规格名称不能为空！</string>
     <string name="supply_commodity_not_sale_save_confirm_not_complete">%s信息未填写完整，暂时不能上架。是否保存为下架状态？</string>
     <string name="supply_switch_spec_confirm">切换为单规格商品之后除第一个原料外的其余原料信息将不再保留，确认切换？</string>
-    <string name="supply_batch_setup_hint">是否对选中的%d种原料进行\"设置平台可销售数量\"操作</string>
+    <string name="supply_batch_setup_hint">是否对选中的%d种原料进行“设置平台可销售数量”操作</string>
     <string name="supply_batch_cancel_setup_hint">确认不需要设置选中的%d种原料的平台可销售数量吗？</string>
     <string name="supply_application_shop_info_title">申请成为供应商</string>
     <string name="supply_application_shop_info_title2">供应商资格审核</string>
@@ -1385,7 +1383,7 @@
     <string name="supply_amp_auto_address">正在定位，请耐心等待</string>
     <string name="supply_amp_long_check">正在处理，请耐心等待</string>
     <string name="supply_map_permission_fine_location_null_setting">地图定位功能需要打开您手机的GPS开关</string>
-    <string name="supply_map_permission_fine_location_null">"二维火供应链"已被禁止使用定位权限，请在您的手机设置中更改应用的权限</string>
+    <string name="supply_map_permission_fine_location_null">“二维火供应链”已被禁止使用定位权限，请在您的手机设置中更改应用的权限</string>
     <string name="supply_map_select_tip">点击选中您搜索到的位置，长按选择其他位置</string>
     <string name="supply_error_other">未知错误，请稍后重试！错误码为</string>
     <string name="supply_no_result">对不起，没有搜索到相关数据！</string>

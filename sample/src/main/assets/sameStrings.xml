@@ -31,7 +31,6 @@
 <string name="supply_purchase_add_cart_failed_text_tips">失败原因：###</string>
 <string name="entry_sheet_number">入库单(###)</string>
 <string name="instock_item_date">入库日期：###</string>
-<string name="supply_goods_unit_name">单位：###</string>
 <string name="change_number">变更数量(###)</string>
 <string name="material_all_number">合计%d项</string>
 <string name="top_adjust_type">调整单类型：###</string>
@@ -147,7 +146,6 @@
 <string name="work_shop_status_add">已添加</string>
 <string name="employee_change_bind_workshop">你输入的员工信息已经绑定了其他二维火账户，确定要更换吗？</string>
 <string name="work_shop_select_title">选店</string>
-<string name="none_work_shop_tip3_supply">本应用是专为餐饮商家的采购、库管及财务人员打造的工具。“添加我工作的店家”后，你可以（在指定权限内）随时随地的进行采购，配送，入库，库存等物流业务和查看进销存报表，极大地提高进销存的效率，为企业提供省钱省力的现代化管理手段。</string>
 <string name="supply_commodity_name">商品名称</string>
 <string name="seat_batch_send_email_address_is_null">EMAIL不能为空，请输入！</string>
 <string name="seat_batch_send_email_address_is_err">EMAIL格式不正确，请重新输入！</string>
@@ -184,7 +182,6 @@
 <string name="supply_warehouse_edit_add_menu">添加商品...</string>
 <string name="supply_warehouse_edit_add_menu_title">添加商品</string>
 <string name="please_put_name">输入名称</string>
-<string name="supply_warehouse_edit_tip">提示：单独关联了仓库的商品，即使其所属分类关联了其他仓库，也只在单独关联的仓库出品。如：“山竹”单独关联了仓库1，即使“山竹”所属的分类“水果”关联了仓库2，“山竹”也只会在仓库1中出品。</string>
 <string name="purchase_goods_num">原料数量</string>
 <string name="no_raw_material_error_purchased">没有要采购的原料，不能生成采购订单</string>
 <string name="confirm_generated_order">确认要生成采购订单吗？</string>
@@ -380,7 +377,6 @@
 <string name="supply_confirm_refund">确认退货并退款</string>
 <string name="supply_auto_agree_hint">同意退货后，请在15日内确认退货，超过期限会自动确认退货。</string>
 <string name="valid_shop_refund_total_is_bigger">退款金额必须小于等于原退货商品的合计金额！</string>
-<string name="valid_shop_refund_total_is_smaller">退款金额小于退货商品的实际金额，请确认此金额已与买家协商过。如有纠纷，将扣除保证金！</string>
 <string name="supply_refund_platform">平台申请退货自动创建</string>
 <string name="supply_audit_refund_export">审核处理退货单导出</string>
 <string name="supply_sell_order_export">销售订单导出</string>
@@ -701,20 +697,15 @@
 <string name="stock_adjustment_refuse_reason">拒绝收货原因</string>
 <string name="system_config_setting">系统参数设置</string>
 <string name="lbl_shop_manager_tip">允许门店管理原料</string>
-<string name="lbl_shop_manager_memo">打开此项后，门店可自行添加/修改/删除原料，并且添加的原料将自动上传至总部原料库。关闭此项后，门店只能查看并使用总部同步下来的原料。</string>
 <string name="lbl_shop_supply_purchase">允许门店自主选择供应商采购</string>
-<string name="lbl_shop_supply_memo">打开此项后，门店在采购叫货时，可以指定具体供应商。如果关闭此项，则门店所有叫货单均由总部审批分派，门店叫货单不显示供应商。</string>
 <string name="lbl_shop_purchase_examine">门店采购单由总部统一审核</string>
-<string name="lbl_shop_purchase_memo">打开此项后，门店向第三方供应商叫货的单据，须由总部审核通过后，才算完成。同时生成相应的入库单（配送中），并转发给第三方供应商。</string>
 <string name="lbl_shop_return_goods_examine">门店退货单由总部统一审核</string>
 <string name="lbl_shop_return_goods_memo">打开此项后，门店的所有退货单，包含第三方供应商都先由总部审核，再实际退货。</string>
 <string name="lbl_shop_in_stock_add">允许门店直接添加入库单</string>
 <string name="lbl_shop_in_stock_memo">关闭此项后，门店不得直接添加入库单，所有入库单必须先采购叫货，再入库。</string>
 <string name="lbl_shop_lose_in_stock">允许负库存</string>
-<string name="lbl_shop_lose_in_stock_memo">打开此项后，库存不足时，可正常配送发货，退货出库，将导致存在负数的库存原料。若不允许有这种情况，请关闭此项。</string>
 <string name="lbl_shop_purchase_platform">允许门店通过采购平台进行采购</string>
 <string name="lbl_shop_third_supply">采购单自动通知第三方供应商</string>
-<string name="lbl_shop_third_supply_memo">打开此项后，采购叫货单状态改为已审核时，读取单据中选择的供应商邮箱，并自动将采购单邮件发送给对方。</string>
 <string name="lbl_shop_supply_purchase_unit">门店向总部采购时只能使用供货单位</string>
 <string name="add_supply">添加供应商</string>
 <string name="supply_supplier_center_name">总部</string>
@@ -742,7 +733,8 @@
 <string name="custom">自定义</string>
 <string name="transfer_add_goods">添加配送原料...</string>
 <string name="allocate_add_goods">添加调拨原料...</string>
-<string name="goods_total_view">合计 </string>
+<string name="goods_total_view">合计</string>
+<string name="goods_money_total_view">项</string>
 <string name="supply_input">导入</string>
 <string name="all_brand">全部品牌</string>
 <string name="all_type">全部类别</string>
@@ -769,7 +761,6 @@
 <string name="stock_inventory_detail_list">原料清单</string>
 <string name="supply_stock_bill_add_goods_num">0项</string>
 <string name="supply_stock_detail_all_difference_money">差异金额：</string>
-<string name="stock_inventory_detail_list_memo">提示：可通过“从历史盘存单导入”快速建立盘存单；或者从头创建盘存单时，先选择盘存仓库，再通过原料清单页面添加盘存原料</string>
 <string name="group_transfer_list">拣货单</string>
 <string name="group_warehouse">拣货仓库</string>
 <string name="group_and_pick_date">拣货日期</string>
@@ -868,7 +859,6 @@
 <string name="supply_relate_goods">相关规格原料</string>
 <string name="supply_relate_goods_add">添加其他规格原料...</string>
 <string name="supply_spec_name">规格名称</string>
-<string name="supply_commodity_delete_confirm">点击确认之后当前商品将被下架删除，商品关联的原料不受影响，您确认要删除当前商品吗？</string>
 <string name="supply_commodity_photo_is_null">商品图片不能为空！</string>
 <string name="supply_commodity_set_warehouse_num">设置库存</string>
 <string name="supply_commodity_set_per_price">设置单价</string>
@@ -969,6 +959,7 @@
 <string name="supply_purchase_spec">商品规格</string>
 <string name="supply_purchase_buy_num">购买数量</string>
 <string name="supply_purchase_check_store">进店看看</string>
+<string name="supply_purchase_cart_del">删 除</string>
 <string name="supply_purchase_cart_statement_tips">您当前所选的商品尚未达到商家的最低订单金额，无法进行结算！</string>
 <string name="supply_purchase_order_should_pay">应付金额：</string>
 <string name="supply_purchase_order_to_pay">去支付</string>
@@ -1051,7 +1042,6 @@
 <string name="supply_purchase_transfer_fee_freed">配送费已免</string>
 <string name="supply_purchase_transfer_free">配送费优惠</string>
 <string name="supply_purchase_load_failed">数据加载失败</string>
-<string name="supply_purchase_load_refresh">刷  新</string>
 <string name="supply_purchase_create_address">新增地址</string>
 <string name="supply_purchase_location_now">当前位置</string>
 <string name="supply_purchase_location_failed">定位失败！</string>
@@ -1107,7 +1097,6 @@
 <string name="supply_print_server_name_is_null">服务器别名不能为空，请确认！</string>
 <string name="supply_print_name_is_null">打印机名称不能为空，请确认！</string>
 <string name="supply_print_server_no_bind">请先绑定打印服务器后再修改名称！</string>
-<string name="margin_pay_success_gathering_set_msg">还未设置收款信息，收款账户绑定成功后，采购方确认收货后的订单金额会转到收款账户，现在去设置吗？</string>
 <string name="margin_pay_success_gathering_set_cancal">暂时不用</string>
 <string name="margin_pay_success_gathering_set_right">设置收款信息</string>
 <string name="message_syn_material_template">模板店铺</string>
@@ -1210,7 +1199,6 @@
 <string name="before_price_adjustment_price">调价前成本价(元)</string>
 <string name="after_price_adjustment_price">调价后成本价(元)</string>
 <string name="purchase_edit_unit_price_tip">采购时允许修改采购单位和单价</string>
-<string name="purchase_edit_unit_price_memo">打开此项后，在向该供应商采购时，可更改采购原料的单价和采购单位。关闭此项后，采购时只能使用进货价和计价单位，不能更改，请确保进货价和计价单位已经准确设置。</string>
 <string name="printer_document_bill_title">单据模板</string>
 <string name="printer_document_detail_title">单据模板详情</string>
 <string name="printer_document_page_size">纸张宽度</string>
@@ -1298,8 +1286,6 @@
 <string name="finance_system_abstract_setting_title_alone">摘要设置</string>
 <string name="finance_system_abstract_setting_detail">财务人员进行摘要自定义设置</string>
 <string name="finance_system_account_auxiliary_setting_title">科目及辅助核算项设置</string>
-<string name="finance_system_menu_message">注：用户只有进行财务系统对接设置、摘要设置和科目及辅助核算项设置之后才能在手机端和财务软件生成凭证。</string>
-<string name="supply_server_address_hint_new">如畅捷通登录地址为http://10.1.1.1:80/tplus/view/login.html，则此处应填http://10.1.1.1:80/tplus/api/v1/</string>
 <string name="finance_system_setting_category_word">类别字</string>
 <string name="finance_system_setting_u8_open_api_account_title">平台账号</string>
 <string name="finance_system_setting_u8_open_api_account_detail">用友Openapi的平台账号</string>
@@ -1355,8 +1341,6 @@
 <string name="supply_finance_system_select">财务系统选择</string>
 <string name="supply_finance_system_select_hint">根据商户使用的财务系统进行选择。</string>
 <string name="supply_voucher_create_mode">凭证生成模式</string>
-<string name="supply_voucher_create_single_hint">此模式下，将根据设定的时间点自动生成凭证，每张已审核的业务单据生成一张凭证，同时也可手动生成凭证。</string>
-<string name="supply_voucher_create_multi_hint">此模式下，将根据设定的时间点自动生成凭证，合并前日所有同一类型业务单据生成凭证，同时也可手动生成凭证。</string>
 <string name="supply_voucher_create_manual_hint">此模式下，财务已审核的单据将不再自动生成凭证和上传，只可手动生成凭证。</string>
 <string name="supply_start_time">首次启用日期</string>
 <string name="supply_start_time_hint">系统首次启用之后完成的单据才能进行财务审核，默认最早启用时间为次日凌晨。</string>
@@ -1375,7 +1359,6 @@
 <string name="supply_audit_voucher_add_memo">如需对已经生成凭证的单据进行反审核操作必须先撤销或红冲对应的凭证。</string>
 <string name="supply_voucher_upload">立即上传</string>
 <string name="supply_voucher_cancel">撤销凭证</string>
-<string name="supply_voucher_red_memo">注：红冲操作将生成一张与该凭证金额相反的凭证并立即自动上传到畅捷通T+服务器对该凭证进行抵消，生成该凭证的单据都将回退到财务已审核状态并可再次生成凭证。</string>
 <string name="supply_voucher_info">凭证信息</string>
 <string name="supply_voucher_origin">原始凭证</string>
 <string name="supply_voucher_memo">注：红冲凭证生成之后将会立即自动上传到畅捷通T+服务器，如凭证上传不成功，请及时查看原因并重新处理。</string>
@@ -1434,7 +1417,6 @@
 <string name="associate_supplier_material_information">关联供应商原料信息</string>
 <string name="default_shipping_material_type">默认发货原料分类</string>
 <string name="select_default_shipping_material_type">选择默认发货原料分类</string>
-<string name="default_shipping_material_type_memo">审核处理门店采购单生成配送单时，系统会按仓库的默认发货原料分类自动分配发货仓库</string>
 <string name="supply_supply_goods_memo">可对供应的原料进行库位管理</string>
 <string name="warehouse_delivery_material">发货仓库相关发货原料</string>
 <string name="distribution">配送</string>
@@ -1445,7 +1427,6 @@
 <string name="no_default_supply">无默认供应商</string>
 <string name="no_default_warehouse">无默认发货仓库</string>
 <string name="lbl_shop_lose_change_stock_num">允许门店更改入库数量</string>
-<string name="lbl_shop_lose_purchase_clearing_time_memo">设置了截止时间后，超过截止时间后当日不能再提交需要总部审核的采购单。</string>
 <string name="lbl_shop_lose_purchase_clearing_time">门店每日提交采购单截止时间</string>
 <string name="goods_category_sort">原料分类排序</string>
 <string name="no_limit">无限制</string>
