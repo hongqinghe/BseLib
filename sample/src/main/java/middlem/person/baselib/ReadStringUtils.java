@@ -1,6 +1,8 @@
 package middlem.person.baselib;
 
 
+import android.util.ArrayMap;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -16,6 +18,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -78,6 +82,7 @@ public class ReadStringUtils {
      * ios源文件
      */
     private static Map<String, String> iosList;
+    private static Map<String, String> iosList2;
     /**
      * 暂存文件集合
      */
@@ -106,6 +111,7 @@ public class ReadStringUtils {
      * 不带format的集合
      */
     private static Map<String, String> iosNoFormatList;
+    private static Map<String, String> iosRemoveFormatList;
     /**
      * 相同String文件且不带format的文件集合
      */
@@ -119,6 +125,7 @@ public class ReadStringUtils {
      * ios String文件路径*（源文件）
      */
     private static final String FILE_IOS_SOURCE_PATH = "/Users/hehongqing/Android/middlem/BaseLib/sample/src/main/assets/ios.txt";
+    private static final String FILE_IOS_SOURCE_revmove_PATH = "/Users/hehongqing/Android/middlem/BaseLib/sample/src/main/assets/remove.txt";
     /**
      * 两端不相同的String
      */
@@ -131,6 +138,7 @@ public class ReadStringUtils {
      * 最终生成Ios.txt格式的路径(带format的String)
      */
     private static final String FILE_IOS_FORMAT_TEXT_PATH = "/Users/hehongqing/Android/middlem/BaseLib/sample/src/main/assets/iosFormatString.txt";
+    private static final String FILE_IOS_FORMAT_test_PATH = "/Users/hehongqing/Android/middlem/BaseLib/sample/src/main/assets/iosRemove.txt";
     /**
      * android端的format string 文件路径
      */
@@ -151,6 +159,7 @@ public class ReadStringUtils {
     public static void main(String[] args) {
         androidList = new LinkedHashMap<>();
         iosList = new LinkedHashMap<>();
+        iosList2 = new LinkedHashMap<>();
         tempList = new LinkedHashMap<>();
         iosTempList = new LinkedHashMap<>();
         androidPareList = new LinkedHashMap<>();
@@ -158,6 +167,7 @@ public class ReadStringUtils {
         noFormatList = new LinkedHashMap<>();
         iosFormatList = new LinkedHashMap<>();
         iosNoFormatList = new LinkedHashMap<>();
+        iosRemoveFormatList = new LinkedHashMap<>();
         getString();
     }
 
@@ -192,7 +202,7 @@ public class ReadStringUtils {
             System.out.println("读取android源文件成功，大小为：" + androidList.size());
             System.out.println("读取android源文件成功，并且含有format文件的string有" + formatList.size());
             System.out.println("读取android源文件成功，并且不含有format文件的string有" + noFormatList.size());
-            System.out.println("android 源文件读结束");
+            System.out.println("android 源文件读结束"+"\n");
             toSaveAndroidString(noFormatList, TYPE_NO_FORMAT);
             toSaveAndroidString(formatList, TYPE_FORMAT);
             toText(androidList,TYPE_COMMON_TEXT);
@@ -227,17 +237,19 @@ public class ReadStringUtils {
                 } else {
                     iosNoFormatList.put(s3, s3);
                 }
+                iosList2.put(s3, s3);
                 iosList.put(s3, s3);
                 readLine = bufferedReader.readLine();
             }
             System.out.println("读取ios源文件成功，大小为：" + iosList.size());
             System.out.println("读取ios源文件成功，并且含有format文件的string有" + iosFormatList.size());
             System.out.println("读取ios源文件成功，并且不含有format文件的string有" + iosNoFormatList.size());
-            System.out.println("ios 源文件读结束");
+            System.out.println("ios 源文件读结束"+"\n");
             bufferedReader.close();
             fileReader.close();
-            toCompare(iosList, TYPE_ALL);
+//              iosRemoveReader();
             toCompare(iosNoFormatList, TYPE_NO_FORMAT);
+            toCompare(iosList, TYPE_ALL);
             toIosText(iosFormatList,TYPE_FORMAT);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -269,11 +281,11 @@ public class ReadStringUtils {
                 iosTempList.remove(txtValue);
             }
         }
-        System.out.println("比较完毕，不同大小为" + iosTempList.size());
+        System.out.println("比较完毕，不同大小为" + iosTempList.size()+"\n");
         try {
             if (TYPE_ALL == typeFormat) {
             File file = new File(FILE_COMPARE_PATH);
-            System.out.println("开始写入不同文件");
+            System.out.println("开始写入不同文件---->compare.txt");
             FileOutputStream fileOutputStream = new FileOutputStream(file);
             OutputStreamWriter osw = new OutputStreamWriter(fileOutputStream, "utf-8");
             BufferedWriter bufferedWriter = new BufferedWriter(osw);
@@ -285,7 +297,7 @@ public class ReadStringUtils {
             bufferedWriter.flush();
             osw.flush();
             fileOutputStream.flush();
-            System.out.println("写入不同文件结束");
+            System.out.println("写入不同文件结束，写入大小为"+iosTempList.size()+"\n");
             }
             //写入noFormat字符
             toIosText(noFormatList,typeFormat);
@@ -309,8 +321,7 @@ public class ReadStringUtils {
         if (TYPE_NO_FORMAT == typeFormat) {
             file = new File(FILE_IOS_NO_FORMAT_TEXT_PATH);
         } else  if (TYPE_ALL==typeFormat){
-//            file = new File(FILE_IOS_FORMAT_TEXT_PATH);
-            //不用写入文件
+            file = new File(FILE_IOS_FORMAT_test_PATH);
             return;
         }else {
             file=new File(FILE_IOS_FORMAT_TEXT_PATH);
@@ -348,10 +359,13 @@ public class ReadStringUtils {
             File file;
             if (TYPE_FORMAT == type) {
                 file = new File(FILE_FORMAT_PATH);
+                System.out.println("开始写入format android字符------>androidFormatString.xml");
             } else if (TYPE_SAME == type) {
                 file = new File(FILE_SAME_PATH);
+                System.out.println("开始写入相同字符------>sameString.xml");
             } else {
                 file = new File(FILE_ANDROID_NO_FORMAT_PATH);
+                System.out.println("开始写入no format  android 字符---->androidNoFormat.xml");
             }
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
@@ -373,6 +387,7 @@ public class ReadStringUtils {
                 student.setTextContent(value);
                 tf.transform(new DOMSource(document), new StreamResult(file));
             }
+            System.out.println("android 字符写入完毕"+"\n");
         } catch (ParserConfigurationException | TransformerException e) {
             e.printStackTrace();
         }
@@ -389,10 +404,10 @@ public class ReadStringUtils {
         File file = null;
         if (TYPE_COMMON_TEXT == typeFormat) {
             file = new File(FILE_COMMON_FINAL_PATH);
-            System.out.println("开始写入android对应的所有字符串，对应的大小为"+iosList.size());
+            System.out.println("开始写入android对应的所有字符串（最终版），(commonFinal.txt)对应的大小为"+iosList.size());
         } else  if (TYPE_IOS_TEXT==typeFormat){
             file = new File(FILE_IOS_FINAL_PATH);
-            System.out.println("开始写入两端不统一字符串，对应的大小为"+iosList.size());
+            System.out.println("开始写入两端不统一字符串(最终版)(iosFinal.txt)，对应的大小为"+iosList.size());
         }
         FileOutputStream fileOutputStream = null;
         try {
@@ -408,10 +423,83 @@ public class ReadStringUtils {
             osw.flush();
             fileOutputStream.flush();
             System.out.println("最终文件写入成功");
+//            iosRemoveReader();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    /**
+     * 读取ios文件
+     */
+    public static void iosRemoveReader() {
+        FileReader file = null;
+        try {
+            Map<String ,String > temp=iosList2;
+            File file2 = new File(FILE_IOS_SOURCE_revmove_PATH);
+            FileReader fileReader = new FileReader(file2);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String readLine = bufferedReader.readLine();
+            if (readLine != null) {
+                System.out.println("开始读取ios源文件");
+            }
+
+            while (readLine != null) {
+                // 去掉引号
+                String s3 = readLine.replaceAll("\"", "");
+                for (String key : temp.keySet()) {
+                    if (key.equals(s3)){
+                        iosList.remove(key);
+                    }
+                }
+//
+                readLine = bufferedReader.readLine();
+            }
+            System.out.println("读取ios源文件成功，大小为：" + iosList2.size());
+            System.out.println("读取ios源文件成功，并且含有format文件的string有" + iosFormatList.size());
+            System.out.println("读取ios源文件成功，并且不含有format文件的string有" + iosNoFormatList.size());
+            System.out.println("ios 源文件读结束"+"\n");
+            bufferedReader.close();
+            fileReader.close();
+//            toCompare(iosNoFormatList, TYPE_NO_FORMAT);
+            toIosCompare(iosList, TYPE_ALL);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 字符串比较(如果在android集合中，key对应的value可以取到对应的ios  value值，在生成相同的文件)
+     *
+     * @param iosList
+     * @param typeFormat
+     */
+    private static void toIosCompare(Map<String, String> iosList, int typeFormat) {
+
+        iosTempList = iosList;
+        System.out.println("比较完毕，不同大小为" + iosTempList.size()+"\n");
+        try {
+            if (TYPE_ALL == typeFormat) {
+                File file = new File(FILE_IOS_FORMAT_test_PATH);
+                System.out.println("开始写入不同文件---->compare.txt");
+                FileOutputStream fileOutputStream = new FileOutputStream(file);
+                OutputStreamWriter osw = new OutputStreamWriter(fileOutputStream, "utf-8");
+                BufferedWriter bufferedWriter = new BufferedWriter(osw);
+                for (String s : iosTempList.keySet()) {
+                    iosTempList.get(s);
+                    bufferedWriter.write("\"" + iosTempList.get(s) + "\"");
+                    bufferedWriter.newLine();
+                }
+                bufferedWriter.flush();
+                osw.flush();
+                fileOutputStream.flush();
+                System.out.println("写入不同文件结束，写入大小为"+iosTempList.size()+"\n");
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

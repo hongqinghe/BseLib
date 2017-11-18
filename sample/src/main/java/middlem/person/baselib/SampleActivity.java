@@ -36,7 +36,7 @@ public class SampleActivity extends FragmentActivity {
     @Inject
     Demo2 demo2;
     private RecyclerView recycleView;
-    private TextView textContent,textContent2;
+    private TextView textContent, textContent2;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
@@ -51,27 +51,28 @@ public class SampleActivity extends FragmentActivity {
         recycleView = findViewById(R.id.recycleView);
         textContent = findViewById(R.id.textView);
         textContent2 = findViewById(R.id.textView2);
-        String[] array={getResources().getString(R.string.string_format),getResources().getString(R.string.app_name)};
+        String[] array = {getResources().getString(R.string.string_format), getResources().getString(R.string.app_name)};
         textContent2.setText(array[0]);
         Person person = new Person();
         Demo demo = new Demo(person);
         Log.e(TAG, demo.toDo());
         Log.e(TAG, demo2.toDo());
-textContent.setText(getString(R.string.supply_batch_setup_hint));
+        textContent.setText(getString(R.string.base_null_list_tips));
 //        ReadStringUtils.getString(this);
 //        ReadStringUtils.textReader(this);
     }
 
     /**
      * 字符格式化
+     *
      * @param view
      */
     @SuppressLint({"StringFormatInvalid", "StringFormatMatches"})
     public void stringFormat(View view) {
         @SuppressLint("StringFormatMatches")
 //        String format = String.format(getResources().getString(R.string.string_format), 100);
-        String format = String.format(getResources().getString(R.string.purchase_price_plan_name_now), 5,5);
-        System.out.println("=================="+format);
+                String format = String.format(getResources().getString(R.string.purchase_price_plan_name_now), 5, 5);
+        System.out.println("==================" + format);
         @SuppressLint("SimpleDateFormat") SimpleDateFormat sDateFormat = new SimpleDateFormat("EEEE");
         Calendar calendar = Calendar.getInstance();
 
