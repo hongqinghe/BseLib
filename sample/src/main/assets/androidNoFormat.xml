@@ -235,7 +235,7 @@
 <string name="shop_head_name">连锁总部名称</string>
 <string name="shop_head_code">连锁总部编号</string>
 <string name="work_shop_delete_tip">确定要解除与这家店的绑定关系吗？</string>
-<string name="shop_head_status_sucess">我工作的连锁总部添加成功</string>
+<string name="shop_head_status_sucess">我工作的连锁总部添加成功！</string>
 <string name="work_shop_status_disable">已失效，店家在“员工”中解除了与我的绑定</string>
 <string name="work_shop_status_delete">已失效，店家在“员工”中删除了我</string>
 <string name="shop_head_add_again">重新添加这个连锁总部</string>
@@ -1456,7 +1456,7 @@
 <string name="delete_module_address">确认要删除当前收货地址吗？</string>
 <string name="supply_audit_passed">审核已通过！</string>
 <string name="supply_under_review_content">工作人员正在努力审核中，请耐心等待。</string>
-<string name="supply_audit_passed_content">您提交的供应商资格申请已经通过审核，请您在一个月之类内成保证金支付，支付成功之后系统将自动为您激活供应商资格，如果逾期未支付本次申请将自动作废。</string>
+<string name="supply_audit_passed_content">您提交的供应商资格申请已经通过审核，请您在一个月之完成成保证金支付，支付成功之后系统将自动为您激活供应商资格，如果逾期未支付本次申请将自动作废。</string>
 <string name="supply_go_pay">去 支 付</string>
 <string name="supply_info_agree">我已阅读并同意</string>
 <string name="supply_info_protocol">《供应商入驻规则》</string>
@@ -1901,7 +1901,7 @@
 <string name="none_work_shop_tip2">在“我的”－“我工作的店家”中，可以管理我工作的店家</string>
 <string name="none_work_shop_tip3">本应用是专为餐厅管理人员打造的工具。“添加我工作的店家”后，你可以（在指定的权限内）查看营业报表，对商品、桌位、员工、原料等基础内容进行管理，还可以发红包、发促销短信、开展促销活动。</string>
 <string name="btn_welcome_jump_title_item">跳 过</string>
-<string name="work_shop_status_sucess">我工作的店家添加成功</string>
+<string name="work_shop_status_sucess">我工作的店家添加成功！</string>
 <string name="work_shop_name">店家名称</string>
 <string name="work_shop_code">店家编号</string>
 <string name="work_shop_item_code">店家编号：</string>

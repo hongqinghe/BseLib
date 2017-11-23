@@ -25,4 +25,5 @@ dependencies {
     compile rootProject.ext.dependencies["recycleView"]
     // 必须添加的依赖（每个模块）
     annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
+    compile 'org.apache.commons:commons-lang3:3.5'
 }
