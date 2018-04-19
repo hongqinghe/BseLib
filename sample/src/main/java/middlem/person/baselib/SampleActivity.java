@@ -5,7 +5,6 @@ import android.support.annotation.Nullable;
 import android.view.View;
 
 import middlem.person.basemodule.BaseActivity;
-import middlem.person.basemodule.dagger.DaggerSmapleActivity;
 
 /***********************************************
  * <P> desc:
@@ -20,9 +19,14 @@ public class SampleActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
     public void daggerSampleActivity(View view) {
-       nextActivity(DaggerSmapleActivity.class);
+//       nextActivity(DaggerSmapleActivity.class);
+    }
+
+    public void viewTest(View view) {
+        nextActivity(ViewTestActivity.class);
     }
 }

@@ -13,4 +13,10 @@
      android:text="DaggerSampleActivity"
      style="@style/button_style"
      android:onClick="daggerSampleActivity"/>
+ <Button
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="ViewTest"
+     style="@style/button_style"
+     android:onClick="viewTest"/>
 </LinearLayout>

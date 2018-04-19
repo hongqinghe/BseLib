@@ -22,6 +22,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation project(':BaseModule')
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     compile rootProject.ext.dependencies["recycleView"]
     // 必须添加的依赖（每个模块）
     annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
