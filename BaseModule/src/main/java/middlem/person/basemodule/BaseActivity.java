@@ -18,6 +18,7 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        TDFActivityStackManager.getInstance().addStackActivity(this);
     }
 
 
@@ -31,5 +32,12 @@ public class BaseActivity extends AppCompatActivity {
         }else {
             startActivity(intent);
         }
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        TDFActivityStackManager.getInstance().popActivity(this);
     }
 }

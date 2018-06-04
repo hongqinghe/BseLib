@@ -7,3 +7,5 @@
 /build
 /captures
 .externalNativeBuild
+BaseModule/libs/
+BaseModule/src/main/res/drawable/

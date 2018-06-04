@@ -22,11 +22,28 @@ public class SampleActivity extends BaseActivity {
 
     }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+
     public void daggerSampleActivity(View view) {
-//       nextActivity(DaggerSmapleActivity.class);
+        nextActivity(KeyBoardNumberActivity.class);
     }
 
     public void viewTest(View view) {
         nextActivity(ViewTestActivity.class);
+//        finish();
     }
 }

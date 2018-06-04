@@ -4,7 +4,6 @@
 	
 	<application android:name=".App">
 		<activity android:name=".BaseActivity" />
-		<activity android:name=".dagger.DaggerSmapleActivity"></activity>
 		<!--<receiver android:name=".SupplyBaseReceiver"/>-->
 	</application>
 

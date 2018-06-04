@@ -6,9 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import middlem.person.basemodule.BaseActivity;
 import middlem.person.basemodule.receiver.SupplyBaseReceiver;
 
-public class ViewTestActivity extends AppCompatActivity {
+public class ViewTestActivity extends BaseActivity {
 
     private SupplyBaseReceiver baseReceiver;
     private static final String BROADCAST_ACTION = "com.seasy.android.SupplyBaseReceiver";
@@ -34,8 +35,9 @@ public class ViewTestActivity extends AppCompatActivity {
     }
 
     public void toSend(View view) {
-        Intent intent=new Intent();
-        intent.setAction(BROADCAST_ACTION);
-        sendBroadcast(intent);
+//        Intent intent=new Intent();
+//        intent.setAction(BROADCAST_ACTION);
+//        sendBroadcast(intent);
+        recreate();
     }
 }
